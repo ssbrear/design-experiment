@@ -29,18 +29,28 @@ const createProducts = () => {
   }
 };
 createProducts();
+
 $("#burger, #modal").click(function (e) {
-  console.log($(e.target));
-  if (
-    e.target.id != "modal" &&
-    e.target.id != "burger" &&
-    !$(e.target).hasClass("line")
-  )
-    return;
+  if (checkInvalidModalChange(e.target)) return;
+  toggleModal();
+});
+function checkInvalidModalChange(target) {
+  const validToggles = [
+    target.id === "modal",
+    target.id === "burger",
+    target.id === "modal-x",
+    $(target).hasClass("line"),
+  ];
+  for (let i = 0; i < validToggles.length; i++) {
+    if (validToggles[i] === true) return false;
+  }
+  return true;
+}
+function toggleModal() {
   const modalIsHidden = $("#modal").attr("aria-hidden");
   if (modalIsHidden == "true") {
     $("#modal").attr("aria-hidden", "false");
     return;
   }
   $("#modal").attr("aria-hidden", "true");
-});
+}
