@@ -37,8 +37,8 @@
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   -webkit-column-gap: 1em;
           column-gap: 1em;
   row-gap: 2em;
@@ -57,7 +57,7 @@ svg {
 }
 
 .card {
-  width: 20em;
+  width: 15em;
   -ms-grid-column-align: center;
       justify-self: center;
   -webkit-transition: all 0.5s ease-in-out;
