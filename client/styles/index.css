@@ -7,8 +7,14 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  visibility: visible;
   z-index: 10;
+}
+
+#modal[aria-hidden="true"] {
+  background-color: rgba(0, 0, 0, 0);
+  visibility: hidden;
 }
 
 #modal-body {
@@ -24,14 +30,13 @@
   height: 100%;
   z-index: 11;
   position: relative;
+  right: 0;
+  -webkit-transition: right 0.5s ease-in-out;
+  transition: right 0.5s ease-in-out;
 }
 
-#modal-body .btn {
-  width: 150px;
-}
-
-[aria-hidden="true"] {
-  display: none !important;
+#modal-body[aria-hidden="true"] {
+  right: 360px;
 }
 
 main {

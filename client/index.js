@@ -51,8 +51,8 @@ function checkInvalidModalChange(target) {
 function toggleModal() {
   const modalIsHidden = $("#modal").attr("aria-hidden");
   if (modalIsHidden == "true") {
-    $("#modal").attr("aria-hidden", "false");
+    $("#modal, #modal-body").attr("aria-hidden", "false");
     return;
   }
-  $("#modal").attr("aria-hidden", "true");
+  $("#modal, #modal-body").attr("aria-hidden", "true");
 }
