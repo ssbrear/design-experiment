@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  font-family: 'Dela Gothic One';
+}
+
+main {
+  margin-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  row-gap: 2em;
+}
+
+main .product-card {
+  background: blue;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 50px black;
+          box-shadow: 5px 5px 50px black;
+}
+
+main .product-card img {
+  border-radius: 4px;
+}
+/*# sourceMappingURL=index.css.map */
